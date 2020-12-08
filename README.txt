@@ -109,7 +109,7 @@ MAILCHIMP_LIST_ID=3246201174
 Используйте свои apikey, server и list_id
 
 Получить эти данные можно зарегистрировашись на сайте mailchimp.com
-(думаю эту частьне нужно описывать, поэтому не пишу)
+(думаю эту часть не нужно описывать, поэтому не пишу)
 
 
 -----
@@ -118,6 +118,9 @@ MAILCHIMP_LIST_ID=3246201174
 
 Перенесети ваших подписчиков из таблицы user_subscribe в mailchamp. Запустите в консоли команду:
 php artisan send-subscribers
+
+- если данные MAILCHIMP_APIKEY, MAILCHIMP_SERVER, MAILCHIMP_LIST_ID были установлены правильные, то команда
+отработает без ошибок и в отобразит в консоли ответ сервера (кучу данных)
 
 - после выполнения этой команды в mailchamp в вашем списке появяться новые подписчики.
 
@@ -131,7 +134,7 @@ php artisan send-subscribers
 crontab -e
 
 введите там такую строку:
-* * * * * php /var/www/emailing_test/artisan schedule:run >>/dev/null 2>&1
+* * * * * php /var/www/subscribe/artisan schedule:run >>/dev/null 2>&1
 
 и сохраните файл. Теперь расписания ларавел будут "сами" запускаться в нужное время.
 
