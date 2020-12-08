@@ -64,12 +64,7 @@ git clone https://github.com/vlad13/subscribe-files.git
 
 Также скрытую директорию .git можно перенести из директории /var/www/subscribe-files
 в /var/www/subscribe если необходимо будет выгружать изменения обратно в github.
-
-
-
-далее выполните в консоли:
-cd /var/www/subscribe
-git pull origin main
+(пулить/пушить нужно из/в ветку main)
 
 
 
